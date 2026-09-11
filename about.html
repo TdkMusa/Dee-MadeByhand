@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dee-Made byhand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <span class="logo-main">Dee-Made</span>
+        <span class="logo-sub">BYHAND</span>
+      </a>
+      <nav class="nav-links" id="site-navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <button class="cart-icon cart-toggle" type="button" aria-label="Open shopping cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 6h15l-1.5 9h-12z"></path>
+            <path d="M6 6 5 3H2"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="17" cy="20" r="1"></circle>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Story ===== -->
+  <main>
+  <section class="page-header">
+    <div class="container">
+      <div class="eyebrow">OUR STORY</div>
+      <h1>Simple. Natural. Handmade.</h1>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="container about-grid">
+      <div>
+        <p>Dee-Made byhand is a small South African self-care brand. Everything we sell is blended, filled and packed by hand in small batches — herbal infusions, bath teas, bath salts, bath oils and gift sets.</p>
+        <p>We keep our range simple on purpose. Flowers and herbs like hibiscus, chamomile, lavender, rose and calendula do the work, and we would rather make a few things carefully than many things quickly.</p>
+        <p>Every order is packed by hand, which means the person who made your tea is the same person who wrapped it.</p>
+      </div>
+      <div class="placeholder-box">
+        <span class="ph-label">Photo coming soon</span>
+        <span class="ph-caption">Studio photo</span>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ===== Feature cards ===== -->
+  <section>
+    <div class="container">
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>Small batches</h3>
+          <p>Blended and packed by hand, a few batches at a time.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Natural botanicals</h3>
+          <p>Flowers, herbs and oils — nothing complicated.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Made in South Africa</h3>
+          <p>Shipped locally via PUDO lockers or your door.</p>
+        </div>
+
+      </div>
+
+      <div class="about-actions">
+        <a href="shop.html" class="btn btn-primary">Shop the range</a>
+        <a href="contact.html" class="btn btn-outline">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <h3>Dee-Made byhand</h3>
+        <div class="tagline">Simple. Natural. Handmade.</div>
+        <p class="desc">Handmade self-care, blended and packed by hand in South Africa.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html#herbal-infusions">Herbal Infusions</a></li>
+          <li><a href="shop.html#bath">Bath</a></li>
+          <li><a href="shop.html#gift-sets">Gift Sets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>Shipping &amp; Delivery</li>
+          <li>Returns &amp; Refunds</li>
+          <li>FAQ</li>
+        </ul>
+        <h4 style="margin-top:24px;">Legal</h4>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms &amp; Conditions</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Delivery</h4>
+        <ul>
+          <li>PUDO locker-to-locker — R49.89</li>
+          <li>PUDO door delivery — R74.89</li>
+          <li>Orders of R500 or more: free locker collection, R24.47 to your door</li>
+        </ul>
+        <ul style="margin-top:16px;">
+          <li><a href="contact.html" class="underline">Get in touch</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="cart-drawer" aria-hidden="true">
+    <div class="cart-backdrop"></div>
+    <aside class="cart-panel" aria-labelledby="cart-title"><div class="cart-header"><h2 id="cart-title">Your cart</h2><button class="cart-close" type="button" aria-label="Close shopping cart">Close</button></div><div class="cart-items"></div><p class="cart-empty">Your cart is empty.</p><div class="cart-summary"><span>Total</span><strong class="cart-total-value">R0.00</strong></div><button class="btn whatsapp-button" type="button">Request payment via WhatsApp</button><p class="cart-notice" role="status"></p></aside>
+  </div>
+  <script src="cart.js"></script>
+
+</body>
+</html>

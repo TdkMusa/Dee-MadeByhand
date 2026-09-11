@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dee-Made byhand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <span class="logo-main">Dee-Made</span>
+        <span class="logo-sub">BYHAND</span>
+      </a>
+      <nav class="nav-links" id="site-navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <button class="cart-icon cart-toggle" type="button" aria-label="Open shopping cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 6h15l-1.5 9h-12z"></path>
+            <path d="M6 6 5 3H2"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="17" cy="20" r="1"></circle>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Page header ===== -->
+  <main>
+  <section class="page-header">
+    <div class="container">
+      <div class="eyebrow">CONTACT</div>
+      <h1>Get in touch</h1>
+      <p>Questions about an order, a gift set or a custom request? Send us a message.</p>
+    </div>
+  </section>
+
+  <!-- ===== Contact form ===== -->
+  <section class="contact-section">
+    <div class="container">
+      <form class="contact-grid contact-form">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" minlength="10" required></textarea>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </div>
+      </form>
+      <p class="form-status" role="status" aria-live="polite"></p>
+
+      <div class="contact-info-grid">
+        <div class="info-card">
+          <div class="eyebrow">DELIVERY</div>
+          <p>PUDO locker-to-locker — R49.89</p>
+          <p>PUDO door delivery — R74.89</p>
+          <p>Orders R500 or more — free locker collection</p>
+          <p>Orders R500 or more — R24.47 to your door</p>
+        </div>
+
+        <div class="info-card">
+          <div class="eyebrow">OTHER WAYS TO REACH US</div>
+          <p>WhatsApp — number to be added</p>
+          <p>Email — address to be added</p>
+          <p>Instagram / Facebook — links to be added</p>
+          <p>These will be filled in as soon as Dee supplies the details. Until then, please use the form.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <h3>Dee-Made byhand</h3>
+        <div class="tagline">Simple. Natural. Handmade.</div>
+        <p class="desc">Handmade self-care, blended and packed by hand in South Africa.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html#herbal-infusions">Herbal Infusions</a></li>
+          <li><a href="shop.html#bath">Bath</a></li>
+          <li><a href="shop.html#gift-sets">Gift Sets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>Shipping &amp; Delivery</li>
+          <li>Returns &amp; Refunds</li>
+          <li>FAQ</li>
+        </ul>
+        <h4 style="margin-top:24px;">Legal</h4>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms &amp; Conditions</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Delivery</h4>
+        <ul>
+          <li>PUDO locker-to-locker — R49.89</li>
+          <li>PUDO door delivery — R74.89</li>
+          <li>Orders of R500 or more: free locker collection, R24.47 to your door</li>
+        </ul>
+        <ul style="margin-top:16px;">
+          <li><a href="contact.html" class="underline">Get in touch</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="cart-drawer" aria-hidden="true">
+    <div class="cart-backdrop"></div>
+    <aside class="cart-panel" aria-labelledby="cart-title"><div class="cart-header"><h2 id="cart-title">Your cart</h2><button class="cart-close" type="button" aria-label="Close shopping cart">Close</button></div><div class="cart-items"></div><p class="cart-empty">Your cart is empty.</p><div class="cart-summary"><span>Total</span><strong class="cart-total-value">R0.00</strong></div><button class="btn whatsapp-button" type="button">Request payment via WhatsApp</button><p class="cart-notice" role="status"></p></aside>
+  </div>
+  <script src="cart.js"></script>
+
+</body>
+</html>
