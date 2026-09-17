@@ -14,8 +14,8 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a href="index.html" class="logo">
-        <span class="logo-main">Dee-Made</span>
-        <span class="logo-sub">BYHAND</span>
+          <img src="img/dee-made-logo.png" alt="" class="logo-mark" onerror="this.hidden = true" />
+        <span class="logo-copy"><span class="logo-main">Dee-Made</span><span class="logo-sub">BYHAND</span></span>
       </a>
       <nav class="nav-links" id="site-navigation">
         <a href="index.html">Home</a>
@@ -98,13 +98,13 @@
 
       <div class="product-grid">
         <div class="product-card">
-          <div class="placeholder-box image-box">
-            <img src="img/rose-bloom-bath-salts.jpg" alt="Bath Salts" />
-          </div>
+          <button class="placeholder-box image-box product-image-trigger" type="button" data-select-bath-salts aria-label="Choose a Bath Salts blend">
+            <img src="img/bath-salts-trio.jpg" alt="Lavender Serenity, Rose Bloom and Calendula Calm bath salts" />
+          </button>
           <div class="product-card-body">
             <h3>Bath Salts</h3>
             <p class="desc">Mineral salts with botanical blends.</p>
-            <div class="product-purchase"><strong>From R89</strong><button class="btn btn-primary" type="button" data-add-to-cart data-product="Bath Salts" data-price="89">Add to cart</button></div>
+            <div class="product-purchase"><strong>From R89</strong><button class="btn btn-primary" type="button" data-select-bath-salts>Choose a blend</button></div>
           </div>
         </div>
 
@@ -196,6 +196,36 @@
   <div class="cart-drawer" aria-hidden="true">
     <div class="cart-backdrop"></div>
     <aside class="cart-panel" aria-labelledby="cart-title"><div class="cart-header"><h2 id="cart-title">Your cart</h2><button class="cart-close" type="button" aria-label="Close shopping cart">Close</button></div><div class="cart-items"></div><p class="cart-empty">Your cart is empty.</p><div class="cart-summary"><span>Total</span><strong class="cart-total-value">R0.00</strong></div><button class="btn whatsapp-button" type="button">Request payment via WhatsApp</button><p class="cart-notice" role="status"></p></aside>
+  </div>
+
+  <div class="salt-picker" aria-hidden="true">
+    <div class="salt-picker-backdrop"></div>
+    <section class="salt-picker-panel" role="dialog" aria-modal="true" aria-labelledby="salt-picker-title">
+      <div class="salt-picker-header">
+        <div>
+          <div class="eyebrow">BATH SALTS</div>
+          <h2 id="salt-picker-title">Choose your blend</h2>
+        </div>
+        <button class="salt-picker-close" type="button" aria-label="Close Bath Salts choices">Close</button>
+      </div>
+      <div class="salt-options">
+        <button class="salt-option" type="button" data-salt-name="Lavender Serenity" data-salt-price="89">
+          <strong>Lavender Serenity</strong>
+          <span>Calming lavender for a restful soak</span>
+          <small>R89</small>
+        </button>
+        <button class="salt-option" type="button" data-salt-name="Rose Bloom" data-salt-price="89">
+          <strong>Rose Bloom</strong>
+          <span>Delicate rose petals for a luxurious soak</span>
+          <small>R89</small>
+        </button>
+        <button class="salt-option" type="button" data-salt-name="Calendula Calm" data-salt-price="89">
+          <strong>Calendula Calm</strong>
+          <span>Gentle calendula for comforting care</span>
+          <small>R89</small>
+        </button>
+      </div>
+    </section>
   </div>
   <script src="cart.js"></script>
 
