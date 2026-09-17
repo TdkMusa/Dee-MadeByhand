@@ -65,13 +65,13 @@
 
       <div class="product-grid">
         <div class="product-card">
-          <div class="placeholder-box image-box">
+          <button class="placeholder-box image-box product-image-trigger" type="button" data-select-hibiscus aria-label="Choose a Hibiscus Collection blend">
             <img src="img/hibiscus-collection-banner.jpg" alt="Hibiscus Collection" />
-          </div>
+          </button>
           <div class="product-card-body">
             <h3>Hibiscus Collection</h3>
             <p class="desc">Hibiscus, fennel and star anise.</p>
-            <div class="product-purchase"><strong>From R79</strong><button class="btn btn-primary" type="button" data-add-to-cart data-product="Hibiscus Collection" data-price="79">Add to cart</button></div>
+            <div class="product-purchase"><strong>From R79</strong><button class="btn btn-primary" type="button" data-select-hibiscus>Choose a blend</button></div>
           </div>
         </div>
 
@@ -223,6 +223,41 @@
           <strong>Calendula Calm</strong>
           <span>Gentle calendula for comforting care</span>
           <small>R89</small>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div class="hibiscus-picker" aria-hidden="true">
+    <div class="hibiscus-picker-backdrop salt-picker-backdrop"></div>
+    <section class="salt-picker-panel" role="dialog" aria-modal="true" aria-labelledby="hibiscus-picker-title">
+      <div class="salt-picker-header">
+        <div>
+          <div class="eyebrow">HIBISCUS COLLECTION</div>
+          <h2 id="hibiscus-picker-title">Choose a blend</h2>
+        </div>
+        <button class="hibiscus-picker-close salt-picker-close" type="button" aria-label="Close Hibiscus Collection choices">Close</button>
+      </div>
+      <div class="salt-options">
+        <button class="salt-option" type="button" data-hibiscus-name="Comforting" data-hibiscus-price="79">
+          <strong>Comforting</strong>
+          <span>Rooibos, chamomile and ginger</span>
+          <small>R79</small>
+        </button>
+        <button class="salt-option" type="button" data-hibiscus-name="Scarlett Harmony" data-hibiscus-price="79">
+          <strong>Scarlett Harmony</strong>
+          <span>Hibiscus, star anise and fennel</span>
+          <small>R79</small>
+        </button>
+        <button class="salt-option" type="button" data-hibiscus-name="Familiar" data-hibiscus-price="79">
+          <strong>Familiar</strong>
+          <span>Hibiscus, rooibos and star anise</span>
+          <small>R79</small>
+        </button>
+        <button class="salt-option" type="button" data-hibiscus-name="Hibiscus" data-hibiscus-price="79">
+          <strong>Hibiscus</strong>
+          <span>Pure, refreshing hibiscus petals</span>
+          <small>R79</small>
         </button>
       </div>
     </section>

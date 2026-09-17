@@ -72,6 +72,15 @@
     if (open) closeButton.focus();
   };
 
+  const setHibiscusPickerState = (open) => {
+    const picker = document.querySelector(".hibiscus-picker");
+    const closeButton = document.querySelector(".hibiscus-picker-close");
+    if (!picker) return;
+    picker.classList.toggle("is-open", open);
+    picker.setAttribute("aria-hidden", String(!open));
+    if (open) closeButton.focus();
+  };
+
   const addToCart = (button) => {
     const product = {
       name: button.dataset.product,
@@ -96,6 +105,20 @@
     saveCart();
     renderCart();
     setSaltPickerState(false);
+    setDrawerState(true);
+  };
+
+  const addHibiscusToCart = (button) => {
+    const product = {
+      name: `Hibiscus Collection - ${button.dataset.hibiscusName}`,
+      price: Number(button.dataset.hibiscusPrice)
+    };
+    const existing = cart.find((item) => item.name === product.name);
+    if (existing) existing.quantity += 1;
+    else cart.push({ ...product, quantity: 1 });
+    saveCart();
+    renderCart();
+    setHibiscusPickerState(false);
     setDrawerState(true);
   };
 
@@ -226,8 +249,14 @@
     const saltTrigger = event.target.closest("[data-select-bath-salts]");
     if (saltTrigger) setSaltPickerState(true);
 
+    const hibiscusTrigger = event.target.closest("[data-select-hibiscus]");
+    if (hibiscusTrigger) setHibiscusPickerState(true);
+
     const saltOption = event.target.closest("[data-salt-name]");
     if (saltOption) addSaltToCart(saltOption);
+
+    const hibiscusOption = event.target.closest("[data-hibiscus-name]");
+    if (hibiscusOption) addHibiscusToCart(hibiscusOption);
 
     const cartToggle = event.target.closest(".cart-toggle");
     if (cartToggle) setDrawerState(true);
@@ -239,6 +268,9 @@
     if (event.target.closest(".salt-picker-close") || event.target.classList.contains("salt-picker-backdrop")) {
       setSaltPickerState(false);
     }
+
+    if (event.target.closest(".hibiscus-picker-close")) setHibiscusPickerState(false);
+    if (event.target.classList.contains("hibiscus-picker-backdrop")) setHibiscusPickerState(false);
 
     const cartAction = event.target.closest("[data-cart-action]");
     if (cartAction) {
@@ -255,6 +287,7 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") setDrawerState(false);
     if (event.key === "Escape") setSaltPickerState(false);
+    if (event.key === "Escape") setHibiscusPickerState(false);
   });
 
   document.querySelector(".whatsapp-button")?.addEventListener("click", () => {

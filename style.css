@@ -790,7 +790,15 @@ textarea:focus-visible {
   z-index: 90;
 }
 
-.salt-picker.is-open {
+.hibiscus-picker {
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
+.salt-picker.is-open,
+.hibiscus-picker.is-open {
   visibility: visible;
 }
 
@@ -802,7 +810,8 @@ textarea:focus-visible {
   transition: opacity 0.2s ease;
 }
 
-.salt-picker.is-open .salt-picker-backdrop {
+.salt-picker.is-open .salt-picker-backdrop,
+.hibiscus-picker.is-open .salt-picker-backdrop {
   opacity: 1;
 }
 
@@ -819,7 +828,8 @@ textarea:focus-visible {
   transition: transform 0.2s ease;
 }
 
-.salt-picker.is-open .salt-picker-panel {
+.salt-picker.is-open .salt-picker-panel,
+.hibiscus-picker.is-open .salt-picker-panel {
   transform: translateY(0);
 }
 
