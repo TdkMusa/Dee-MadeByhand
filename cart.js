@@ -81,6 +81,15 @@
     if (open) closeButton.focus();
   };
 
+  const setChamomilePickerState = (open) => {
+    const picker = document.querySelector(".chamomile-picker");
+    const closeButton = document.querySelector(".chamomile-picker-close");
+    if (!picker) return;
+    picker.classList.toggle("is-open", open);
+    picker.setAttribute("aria-hidden", String(!open));
+    if (open) closeButton.focus();
+  };
+
   const addToCart = (button) => {
     const product = {
       name: button.dataset.product,
@@ -110,7 +119,7 @@
 
   const addHibiscusToCart = (button) => {
     const product = {
-      name: `Hibiscus Collection - ${button.dataset.hibiscusName}`,
+      name: `Hibiscus Collection - ${button.dataset.hibiscusName} (10 tea bags)`,
       price: Number(button.dataset.hibiscusPrice)
     };
     const existing = cart.find((item) => item.name === product.name);
@@ -119,6 +128,20 @@
     saveCart();
     renderCart();
     setHibiscusPickerState(false);
+    setDrawerState(true);
+  };
+
+  const addChamomileToCart = (button) => {
+    const product = {
+      name: `Chamomile Collection - ${button.dataset.chamomileName}`,
+      price: Number(button.dataset.chamomilePrice)
+    };
+    const existing = cart.find((item) => item.name === product.name);
+    if (existing) existing.quantity += 1;
+    else cart.push({ ...product, quantity: 1 });
+    saveCart();
+    renderCart();
+    setChamomilePickerState(false);
     setDrawerState(true);
   };
 
@@ -252,11 +275,17 @@
     const hibiscusTrigger = event.target.closest("[data-select-hibiscus]");
     if (hibiscusTrigger) setHibiscusPickerState(true);
 
+    const chamomileTrigger = event.target.closest("[data-select-chamomile]");
+    if (chamomileTrigger) setChamomilePickerState(true);
+
     const saltOption = event.target.closest("[data-salt-name]");
     if (saltOption) addSaltToCart(saltOption);
 
     const hibiscusOption = event.target.closest("[data-hibiscus-name]");
     if (hibiscusOption) addHibiscusToCart(hibiscusOption);
+
+    const chamomileOption = event.target.closest("[data-chamomile-name]");
+    if (chamomileOption) addChamomileToCart(chamomileOption);
 
     const cartToggle = event.target.closest(".cart-toggle");
     if (cartToggle) setDrawerState(true);
@@ -271,6 +300,9 @@
 
     if (event.target.closest(".hibiscus-picker-close")) setHibiscusPickerState(false);
     if (event.target.classList.contains("hibiscus-picker-backdrop")) setHibiscusPickerState(false);
+
+    if (event.target.closest(".chamomile-picker-close")) setChamomilePickerState(false);
+    if (event.target.classList.contains("chamomile-picker-backdrop")) setChamomilePickerState(false);
 
     const cartAction = event.target.closest("[data-cart-action]");
     if (cartAction) {
@@ -288,6 +320,7 @@
     if (event.key === "Escape") setDrawerState(false);
     if (event.key === "Escape") setSaltPickerState(false);
     if (event.key === "Escape") setHibiscusPickerState(false);
+    if (event.key === "Escape") setChamomilePickerState(false);
   });
 
   document.querySelector(".whatsapp-button")?.addEventListener("click", () => {

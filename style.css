@@ -797,8 +797,16 @@ textarea:focus-visible {
   z-index: 90;
 }
 
+.chamomile-picker {
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
 .salt-picker.is-open,
-.hibiscus-picker.is-open {
+.hibiscus-picker.is-open,
+.chamomile-picker.is-open {
   visibility: visible;
 }
 
@@ -811,7 +819,8 @@ textarea:focus-visible {
 }
 
 .salt-picker.is-open .salt-picker-backdrop,
-.hibiscus-picker.is-open .salt-picker-backdrop {
+.hibiscus-picker.is-open .salt-picker-backdrop,
+.chamomile-picker.is-open .salt-picker-backdrop {
   opacity: 1;
 }
 
@@ -829,7 +838,8 @@ textarea:focus-visible {
 }
 
 .salt-picker.is-open .salt-picker-panel,
-.hibiscus-picker.is-open .salt-picker-panel {
+.hibiscus-picker.is-open .salt-picker-panel,
+.chamomile-picker.is-open .salt-picker-panel {
   transform: translateY(0);
 }
 
@@ -893,6 +903,29 @@ textarea:focus-visible {
   grid-row: 1 / span 2;
   align-self: center;
   font-weight: 600;
+}
+
+.salt-option-with-image {
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+}
+
+.salt-option-with-image img {
+  width: 72px;
+  height: 72px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.salt-option-with-image strong,
+.salt-option-with-image span {
+  grid-column: 2;
+}
+
+.salt-option-with-image small {
+  grid-column: 3;
 }
 
 .cart-header,
